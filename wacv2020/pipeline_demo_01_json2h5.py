@@ -9,7 +9,7 @@ import os
 import json
 import h5py
 import subprocess
-
+import sys
 import numpy
 from walkDir import walkDir
 
@@ -71,8 +71,8 @@ def loadData(dname):
 
 if __name__ == "__main__":
 
-  dnameIn = "data/demo/keypoints/json/"
-  fnameOut = "data/demo/keypoints/keypoints-01-raw.h5"
+  dnameIn = sys.argv[1] or "data/demo/keypoints/json/"
+  fnameOut = sys.argv[2] or "data/demo/keypoints/keypoints-01-raw.h5"
   
   
   recs = {}

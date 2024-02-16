@@ -1,5 +1,6 @@
 # Using a filter to interpolate missing kezpoints.
  
+import sys
 
 # standard
 import h5py
@@ -82,8 +83,8 @@ if __name__ == "__main__":
   
 
 
-  fnameIn = "data/demo/keypoints/keypoints-01-raw.h5"
-  fnameOut = "data/demo/keypoints/keypoints-02-filter.h5"
+  fnameIn = sys.argv[1] or "data/demo/keypoints/keypoints-01-raw.h5"
+  fnameOut = sys.argv[2] or "data/demo/keypoints/keypoints-02-filter.h5"
 
   dtype = "float32"
   randomNubersGenerator = numpy.random.RandomState(1234)

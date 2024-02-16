@@ -8,7 +8,7 @@ import codecs
 import math
 import copy
 import h5py
-
+import sys
 import numpy
 
 
@@ -141,6 +141,6 @@ def saveAllData(fnameIn, fnameOut):
 
 if __name__ == "__main__":
   saveAllData(
-    "data/demo/keypoints/keypoints-02-filter.h5",
-    "data/demo/keypoints/keypoints-03-deltas.h5"
+    sys.argv[1] or "data/demo/keypoints/keypoints-02-filter.h5",
+    sys.argv[2] or "data/demo/keypoints/keypoints-03-deltas.h5"
   )
