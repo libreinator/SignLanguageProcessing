@@ -2,7 +2,8 @@
 
 # 3rd party
 import numpy
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 # our own 
 import skeletalModel
